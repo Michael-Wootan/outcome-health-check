@@ -1,0 +1,18 @@
+{
+  "name": "outcome-health-check",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Checks whether each automation is achieving its goal, not just exiting cleanly: ground truth from Shopify, Ahrefs, Gmail and GitHub Actions, a verdict per area, deltas against the last run and a top-five action list.",
+  "main": "src/outcome-health-check.js",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "check": "node src/outcome-health-check.js",
+    "check:no-email": "node src/outcome-health-check.js --no-email"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.80.0",
+    "dotenv": "^17.3.1",
+    "imap": "^0.8.19",
+    "nodemailer": "^8.0.11"
+  }
+}
